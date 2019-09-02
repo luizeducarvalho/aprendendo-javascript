@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Título</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h2>Título</h2>
+    </header>
+
+    <section>
+        <div>
+            <p>Ano de nascimento: 
+                <input type="number" name="txtano" id="txtano" min="0" max="2019">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="Masculino">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="Feminino">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verficar()">
+            </p>
+        </div>
+        <div id="res">
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; CursoemVídeo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
