@@ -1,38 +1,44 @@
 
-const stone = 0
-const paper = 1
-const scissor = 2
+const pedra = "pedra"
+const papel = "papel"
+const tesoura = "tesoura"
 
 function start() {
-    //console.log(`CONSTS.: ${pedra}, ${papel}, ${tesoura}`)
-    let machineTurn = geraInteiroAleatorioEntre(0, 3) // Um número aleatório entre 0 e 2
-    let humanTurn = document.getElementsByClassName("opcao") // Opçção selecionada na tela
+    let humanTurn = radioButtonChecked() // Opçção selecionada na tela
+    let machineTurn = getMachineTurn()  // Jogada da máquina
 
-    for (let i = 0; i < humanTurn.length; i++) {
-        if (humanTurn[i].checked) {
-            humanTurn = i
-            //console.log(`:::DEBUG:::\nHuman: ${humanTurn}\nMachine: ${machineTurn}`)
-            if (machineTurn == humanTurn) {
-                console.log(`EMPATE: Ambos escolheram ${humanTurn} M: ${machineTurn}`)
-            } else if (machineTurn == stone) {
-                if (humanTurn == paper) {
-                    console.log(`HUMANO vence: H: ${humanTurn} M: ${machineTurn}`)
-                } else {
-                    console.log(`MÁQUINA vence: H: ${humanTurn} M: ${machineTurn}`)
-                }
-            } else if (machineTurn == paper) {
-                if (humanTurn == scissor) {
-                    console.log(`HUMANO vence: H: ${humanTurn} M: ${machineTurn}`)
-                } else {
-                    console.log(`MÁQUINA vence: H: ${humanTurn} M: ${machineTurn}`)
-                }
-            } else if (machineTurn == scissor) {
-                if (humanTurn == stone) {
-                    console.log(`HUMANO vence: H: ${humanTurn} M: ${machineTurn}`)
-                } else {
-                    console.log(`MÁQUINA vence: H: ${humanTurn} M: ${machineTurn}`)
-                }
-            }
+    //console.log(`:::DEBUG:::\nHuman: ${humanTurn}\nMachine: ${machineTurn}`)
+
+    if (machineTurn == humanTurn) {
+        console.log(`EMPATE: Ambos escolheram ${humanTurn}`)
+    } else if (machineTurn == pedra) {
+        if (humanTurn == papel) {
+            console.log(`HUMANO VENCE:\nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        } else {
+            console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        }
+    } else if (machineTurn == papel) {
+        if (humanTurn == tesoura) {
+            console.log(`HUMANO VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        } else {
+            console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        }
+    } else if (machineTurn == tesoura) {
+        if (humanTurn == pedra) {
+            console.log(`HUMANO VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        } else {
+            console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
+        }
+    }
+}
+
+// Percorre todos os radios buttons e retorna qual foi selecionado
+function radioButtonChecked() {
+    for (let i = 0; i < document.getElementsByClassName("opcao").length; i++) {
+        if (document.getElementsByClassName("opcao")[i].checked) {
+            if (i === 0) return "pedra"
+            if (i === 1) return "papel"
+            if (i === 2) return "tesoura"
         }
     }
 }
@@ -43,3 +49,11 @@ function geraInteiroAleatorioEntre(min = 0, max = 0) {
     const valor = Math.random() * (max - min) + min
     return Math.floor(valor)
 }
+
+function getMachineTurn() {
+    let i = geraInteiroAleatorioEntre(0, 3)
+    if (i === 0) return "pedra"
+    if (i === 1) return "papel"
+    if (i === 2) return "tesoura"
+}
+
