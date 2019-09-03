@@ -1,8 +1,3 @@
-
-const pedra = "pedra"
-const papel = "papel"
-const tesoura = "tesoura"
-
 function start() {
     let humanTurn = radioButtonChecked() // Opçção selecionada na tela
     let machineTurn = getMachineTurn()  // Jogada da máquina
@@ -11,20 +6,20 @@ function start() {
 
     if (machineTurn == humanTurn) {
         console.log(`EMPATE: Ambos escolheram ${humanTurn}`)
-    } else if (machineTurn == pedra) {
-        if (humanTurn == papel) {
+    } else if (machineTurn == "pedra") {
+        if (humanTurn == "papel") {
             console.log(`HUMANO VENCE:\nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
         } else {
             console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
         }
-    } else if (machineTurn == papel) {
-        if (humanTurn == tesoura) {
+    } else if (machineTurn == "papel") {
+        if (humanTurn == "tesoura") {
             console.log(`HUMANO VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
         } else {
             console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
         }
-    } else if (machineTurn == tesoura) {
-        if (humanTurn == pedra) {
+    } else if (machineTurn == "tesoura") {
+        if (humanTurn == "pedra") {
             console.log(`HUMANO VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
         } else {
             console.log(`MÁQUINA VENCE: \nHumano: ${humanTurn} \nMáquina: ${machineTurn}`)
