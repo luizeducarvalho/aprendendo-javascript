@@ -37,6 +37,7 @@ section{
     cursor: pointer;
     outline: none;
     margin-top: 15px;
+    visibility: hidden;
 }
 
 footer{

@@ -1,16 +1,27 @@
 Projetos
 
-<<<<<<< HEAD
-OK  -  Calculadora Intermediária (1 campo)
-OK  -  Verificar se é maior de idade (pela data de nascimento)
-OK  -  Jogo da velha
-OK  -  Pedra, papel e tesoura contra a máquina
-=======
 OK - Calculadora Intermediária (1 campo)
 OK - Verificar se é maior de idade (pela data de nascimento)
 OK - Jogo da velha
 OK - Pedra, papel e tesoura contra a máquina
->>>>>>> b7736ea0da9c9afd4c6587edf1280c5a31a19f0f
+
+- Usar Regex para validar campo de CPF e e-mail
+- Jogo da forca
+- Simulador de dado
+- Usuário insere vários números e mostra a média
+- Contagem Regressiva
+- Display digital de números
+- Jogo batalha naval
+- Usuário insere vários números e mostra a média    
+- Mostrar a temperatura atual em X localização (pegando de algum webservice)
+- Validador de cartão de crédito (pesquisar como cartões de crédito funcionam)
+- Reordenador de lista
+- Inverter a string
+- Testador de expressões regulares
+- Gerenciador de orçamento pessoal
+- Placar de jogo de futebol
+
+
 
 - Calculadora Básica (campos separados)
 - Calculadora Avançada (equações)
@@ -19,13 +30,9 @@ OK - Pedra, papel e tesoura contra a máquina
 - "Sistema operacional" no navegador
 - Calculadora de troco
 - Conversor de moedas
-    - Display digital de números
 - Verificar ganhou/perdeu em jogo de moeda
-    - Placar de jogo de futebol
 - Script para dar unfollow em usuários do instagram que não te seguem
 - Mostrar um deck de cartas
-    - Jogo batalha naval
-    - Jogo da forca
 - Script que você dá uma frase e ele cria vários .txt com uma palavra em cada
 - Verificador de Plágio (Usando o Google com aspas)
 - Pedra, papel e tesoura online
@@ -35,20 +42,12 @@ OK - Pedra, papel e tesoura contra a máquina
 - Jogo de luta intercalada (um golpe por vez, dano aleatório)
 - Mostrar profissão aleatória
 - Distância entre duas posições geográficas
-    - Usuário insere vários números e mostra a média    
-    - Simulador de dado
-    - Mostrar a temperatura atual em X localização (pegando de algum webservice)
 - Tela de compras de supermercado
-    - Contagem Regressiva
 - Jogo de blackjack (21)
 - Calculadora de tijolos necessários
-    - Validador de cartão de crédito (pesquisar como cartões de crédito funcionam)
 - Nome dos números (mil duzentos e trinta e três)
-    - Reordenador de lista
-    - Inverter a string
 - Gerador de feed RSS baseado em banco de dados
 - Área de comentários
-    - Testador de expressões regulares
 - Pegar localização pelo IP ( http://ipinfo.io/0.0.0.0/json )
 - Sistema de consulta para médicos
 - Sistema de conta bancária
@@ -60,6 +59,5 @@ OK - Pedra, papel e tesoura contra a máquina
 - Sistema de Captcha
 - Gerador de PDF
 - Ferramenta de SQL Remoto
-    - Gerenciador de orçamento pessoal
 - Slideshow
 - Portal de Notícias
