@@ -1,9 +1,16 @@
 Projetos
 
+<<<<<<< HEAD
 OK  -  Calculadora Intermediária (1 campo)
 OK  -  Verificar se é maior de idade (pela data de nascimento)
 OK  -  Jogo da velha
 OK  -  Pedra, papel e tesoura contra a máquina
+=======
+OK - Calculadora Intermediária (1 campo)
+OK - Verificar se é maior de idade (pela data de nascimento)
+OK - Jogo da velha
+OK - Pedra, papel e tesoura contra a máquina
+>>>>>>> b7736ea0da9c9afd4c6587edf1280c5a31a19f0f
 
 - Calculadora Básica (campos separados)
 - Calculadora Avançada (equações)

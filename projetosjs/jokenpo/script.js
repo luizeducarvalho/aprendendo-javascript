@@ -7,9 +7,7 @@ function start() {
     //console.log(`CONSTS.: ${pedra}, ${papel}, ${tesoura}`)
     var machineTurn = geraInteiroAleatorioEntre(0, 3) // Um número aleatório entre 0 e 2
     var humanTurn = document.getElementsByClassName("opcao") // Opçção selecionada na tela
-
-    machineTurn = 0;
-
+    
     for (var i = 0; i < humanTurn.length; i++) {
         if (humanTurn[i].checked) {
             humanTurn = i
