@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+section#conteudo {
+    width: 1000px;
+    margin: auto;
+}
+
+iframe#frame-spec {
+    width: 400px;
+    height: 280px;
+    border: none;
+    overflow: hidden;
+    
+}
+
+iframe#frame-spe::-webkit-scrollbar {
+    display: none;
+}
+/*
+iframe#frame-spec::-webkit-scrollbar-button {
+    display: none;
+}
+
+iframe#frame-spec::-webkit-scrollbar-corner {
+    display: none;
+}
+
+iframe#frame-spec::-webkit-scrollbar-track {
+    display: none;
+}
+
+iframe#frame-spec::-webkit-scrollbar-thumb {
+    display: none;
+}
+
+iframe#frame-spec::-webkit-scrollbar-track-piece {
+    display: none;
+}
+*/

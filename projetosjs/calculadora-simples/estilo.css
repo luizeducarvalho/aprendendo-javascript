@@ -1,0 +1,17 @@
+div{
+    padding: 3px;
+}
+
+input#txtres{
+    size: 2150px;
+    padding: 3px;
+    width: 142px;
+    height: 25px;
+    text-align: right;
+    background-color: rgba(128, 128, 128, 0.315);
+}
+input {    
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
