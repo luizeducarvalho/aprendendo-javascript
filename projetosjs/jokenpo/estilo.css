@@ -21,8 +21,22 @@ section{
 
 }
 
+#opcoes {
+    margin-bottom: 0px;
+}
+
+
 #start input {
-    font: normal 12pt Arial;
+    background-color: #0facf3;
+    border: 2px solid #0b7eb1;
+    border-radius: 10px;
+    padding: 2px;
+    width: 40%; /* deixando ele responsivo */
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    margin-top: 15px;
 }
 
 footer{
