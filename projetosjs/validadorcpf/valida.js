@@ -1,82 +1,43 @@
-/* 
- * PEDÊNCIAS:
- *
- * Corrigir validação
- * Corrigir estilo para o botão ficar dentro do imnput
- * 
- */
+(function () {
+    let botaoValidar = document.getElementById('validabtn')
+    let inputCPFValidado = document.getElementById("cpfvalidado")
+    botaoValidar.onclick = function (e) { valida(inputCPFValidado.value) }
+})()
 
-function valida() {
-    let regExp = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}$/   // Regex para validar padrão do cpf com pontos e traços ou apenas números
-    let cpfUsuario = document.getElementById("cpfvalidado").value
-
-    if (!regExp.test(cpfUsuario)) {
-        document.getElementById("cpfvalidado").value = ""
-        document.getElementById("resultado").style.backgroundColor = '#e2e3e5'
+valida = cpf => {
+    if (!estaNoFormato(cpf)) {
+        //document.getElementById("cpfvalidado").value = ""
         exibeMensagem("Informe um CPF na caixa acima")
     } else {
-        cpfUsuario = somenteNumeros(cpfUsuario) // Remove os pontos e traço
-        if (validaCPF(cpfUsuario)) {
-            document.getElementById("resultado").style.backgroundColor = '#ccf1e3'
-            exibeMensagem("CPF válido!")
+        cpf = somenteNumeros(cpf) // Remove os pontos e traço
+        if (validaCPF(cpf)) {
+            //exibeMensagem("CPF válido!", '#ccf1e3')
+            exibeMensagem("CPF válido!", '#00BB75', '#FFFFFF')
         } else {
-            document.getElementById("resultado").style.backgroundColor = '#f7dddc'
-            exibeMensagem("CPF inválido!")
+            //exibeMensagem("CPF inválido!", '#f7dddc')
+            exibeMensagem("CPF inválido!", '#BB0000', '#FFFFFF')
         }
     }
 }
 
-function gera() {
-    let campoCPF = document.getElementById('cpfgerado')
-    let cpfNovo = geraCPFValido()
-    campoCPF.value = cpfNovo
-}
+validaCPF = cpf => {
+    if (todosDigitosIguais(cpf)) return false
 
-function validaCPF(cpf) {
     let soma = 0, resto = 0
-    // Elimina CPFs inválidos conhecidos	
-    if (cpf == "00000000000" ||
-        cpf == "11111111111" ||
-        cpf == "22222222222" ||
-        cpf == "33333333333" ||
-        cpf == "44444444444" ||
-        cpf == "55555555555" ||
-        cpf == "66666666666" ||
-        cpf == "77777777777" ||
-        cpf == "88888888888" ||
-        cpf == "99999999999")
-        return false
-
     for (let i = 0; i < 9; i++) {
         soma += parseInt(cpf[i] * (10 - i))
     }
-
     resto = soma % 11
-    
-    console.log("SOMA1: ", soma)
-    console.log("RESTO1: ", resto)
 
-    if ((resto < 2 && cpf[9] == 0) || (cpf[9] == (11 - resto)))  {
-        console.log("PRIMEIRO DÍGITO OK")
-    }
-
-
-
-    if (resto == cpf[9]) { // Primeiro dígito válido
+    // Válida primeiro dígito
+    if ((resto < 2 && cpf[9] == 0) || (cpf[9] == (11 - resto))) {
         soma = 0
         for (let i = 0; i < 10; i++) {
             soma += parseInt(cpf[i] * (11 - i))
         }
+        resto = soma % 11
 
-
-        resto = (soma * 10) % 11
-
-        /*
-        console.log("SOMA1: ", soma)
-        console.log("SOMA1: ", resto)
-        */
-
-        if (resto == cpf[10]) { // Segundo dígito válido
+        if ((resto < 2 && cpf[10] == 0) || (cpf[10] == (11 - resto))) {
             return true
         } else {
             return false
@@ -86,48 +47,32 @@ function validaCPF(cpf) {
     }
 }
 
-function geraCPFValido() {
-    let cpf = [], soma = 0, resto = 0
-    //cpf = [0, 5, 2, 4, 1, 6, 2, 0, 5]
-    //cpf = [1, 1, 1, 4, 4, 4, 7, 7, 7]
-
-    // Gera os primeiros nove dígitos do CPF
-    for (let i = 0; i < 9; i++) {
-        cpf.push(geraInteiroAleatorioEntre(0, 9))
-        soma += parseInt(cpf[i] * (10 - i))
-    }
-
-    resto = soma % 11
-    resto < 2 ? cpf.push(0) : cpf.push(11 - resto) // Atribui o primeiro dígito verificador
-
-    soma = 0
-    for (let i = 0; i < 10; i++) {
-        //console.log(`cpf[${i}] = ${cpf[i]} X 11 - ${i}`)
-        soma += parseInt(cpf[i] * (11 - i))
-    }
-
-    resto = soma % 11
-    resto < 2 ? cpf.push(0) : cpf.push(11 - resto)
-    return cpf.join('') // Retorna toda array do CPF como uma string concatenada
+estaNoFormato = cpf => {
+    let regExp = /^[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}-?[0-9]{2}$/   // Regex para validar padrão do cpf com pontos e traços ou apenas números
+    return regExp.test(cpf)
 }
 
-function exibeMensagem(str) {
-    let mensagem = document.getElementById("resultado")
-    mensagem.innerHTML = str
+todosDigitosIguais = cpf => {
+    let regExp = /^(\d)\1+$/
+    if (regExp.test(cpf)) {
+        return true
+    } else {
+        return false
+    }
 }
 
-function somenteNumeros(str) {
+exibeMensagem = (mensagem = '', corFundo = '#e2e3e5', corTexto = "#000000") => {
+    document.getElementById("resultado").innerHTML = mensagem
+    document.getElementById("resultado").style.backgroundColor = corFundo
+    document.getElementById("resultado").style.color = corTexto
+}
+
+somenteNumeros = str => {
     let newStr = ''
     for (let i = 0; i < str.length; i++) {
         if (!isNaN(str[i])) {
             newStr += str[i]
         }
     }
-    return newStr
-}
-
-function geraInteiroAleatorioEntre(min = 0, max = 0) {
-    if (min > max) [min, max] = [max, min]
-    const valor = Math.random() * (max - min) + min
-    return Math.floor(valor)
+    return newStr    
 }

@@ -1,28 +1,25 @@
 // Variáveis globais
 var calcVisor = document.getElementById('txtres')   // Tela da calculadora
-var operador = undefined    // Operador escolhido pelo usuário
+var operador = null    // Operador escolhido pelo usuário
 var pNumero = 0    // Primeiro núemro digitado
 
 // Limpa o visor da calculadora
 function resetar() {
-    calcVisor.value = ''    // Limpa tela da calculadora
-    operador = undefined    // Reseta o operador
+    limpaVisorCalculadora()
+    operador = null    // Reseta o operador
     pNumero = 0
 }
 
-function limpaTela() {
-    calcVisor.value = ''    // Limpa tela da calculadora
-}
+limpaVisorCalculadora = () => calcVisor.value = ''
 
 // Adiciona números no visor quando digitados
-function digitar(num) {
-    calcVisor.value = calcVisor.value + num;
-}
+digitar = num => { calcVisor.value += num }
+
 
 function setaOperador(argh) {
     pNumero = Number(calcVisor.value) // Define o núemro que está no visor como primeiro da operação
     operador = argh // Seta o operador recedibo do HTML
-    limpaTela()
+    limpaVisorCalculadora()
 }
 
 function fazConta() {
