@@ -1,3 +1,6 @@
+// Converte um JSON para um objeto js
+const paraObjeto = json => JSON.parse(json)
+
 // Recebe um valor mínino e máximo e retorna um inteiro aleatório sem incluir o máximo
 function geraInteiroAleatorioEntre(min = 0, max = 0) {
     if (min > max) [min, max] = [max, min]
