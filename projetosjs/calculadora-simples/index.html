@@ -13,39 +13,42 @@
 </head>
 
 <body>
+
+    <section>
+        <div>
+            <input type="number" name="calcVisor" id="calcVisor" value="3232">
+        </div>
+    
     <div>
-        <input type="number" name="txtres" id="txtres" value="">
+        <input type="button" class="botaoNumero" value="7" id="b_7">
+        <input type="button" class="botaoNumero" value="8" id="b_8">
+        <input type="button" class="botaoNumero" value="9" id="b_9">
+        <input type="button" class="botaoOperador" value="+" id="b_adicao">
     </div>
     <div>
-        <input type="button" value="7" id="b_7" onclick="digitar(7)">
-        <input type="button" value="8" id="b_8" onclick="digitar(8)">
-        <input type="button" value="9" id="b_9" onclick="digitar(9)">
-        <input type="button" value="+" id="b_adicao" onclick="setaOperador('adicao')">
+        <input type="button" class="botaoNumero" value="4" id="b_4">
+        <input type="button" class="botaoNumero" value="5" id="b_5">
+        <input type="button" class="botaoNumero" value="6" id="b_6">
+        <input type="button" class="botaoOperador" value="-" id="b_subtracao">
     </div>
     <div>
-        <input type="button" value="4" id="b_4" onclick="digitar(4)">
-        <input type="button" value="5" id="b_5" onclick="digitar(5)">
-        <input type="button" value="6" id="b_6" onclick="digitar(6)">
-        <input type="button" value="-" id="b_subtracao" onclick="setaOperador('subtracao')">
-    </div>
-    <div>
-        <input type="button" value="1" id="b_1" onclick="digitar(1)">
-        <input type="button" value="2" id="b_2" onclick="digitar(2)">
-        <input type="button" value="3" id="b_3" onclick="digitar(3)">
-        <input type="button" value="*" id="b_multiplicacao" onclick="setaOperador('multiplicacao')">
+        <input type="button" class="botaoNumero" value="1" id="b_1">
+        <input type="button" class="botaoNumero" value="2" id="b_2">
+        <input type="button" class="botaoNumero" value="3" id="b_3">
+        <input type="button" class="botaoOperador" value="*" id="b_multiplicacao">
     </div>
 
     <div>
-        <input type="reset" value="AC" id="b_reset" onclick="resetar()">
-        <input type="button" value="0" id="b_0" onclick="digitar(0)">
+        <input type="reset" class="botao" value="AC" id="b_reset" onclick="resetaCalculadora()">
+        <input type="button" class="botaoNumero" value="0" id="b_0">
         <!--<input type="button" value="." id="b_ponto">-->
-        <input type="button" value="=" id="b_igual" onclick="fazConta()">
-        <input type="button" value="/" id="b_divisao" onclick="setaOperador('divisao')">
+        <input type="button" class="botao" value="=" id="b_igual" onclick="fazConta()">
+        <input type="button" class="botaoOperador" value="/" id="b_divisao">
     </div>
     <div>
 
     </div>
-
+</section>
     <script src="script.js"></script>
 </body>
 
