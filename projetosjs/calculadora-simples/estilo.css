@@ -27,3 +27,8 @@ input {
 input :hover {
     background-color:  rgba(128, 128, 128, 0.815);
 }
+
+#b_reset {
+    width: 152px;
+    height: 25px;
+}
