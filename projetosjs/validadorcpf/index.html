@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,31 +11,31 @@
 
 <body>
     <header>
-        Trabalhando com regEx
+        Gerador e validador de CPF
     </header>
-
-    <section id="gerador">
-        <div id="formgerador">
+    <div id="principal">
+        <div>
             <input class="botao" type="button" id="gerabtn" value="Gerar CPF">
-            <input class="campotexto" type="search" name="cpfgerado" id="cpfgerado" maxlength="11" value="">
         </div>
-    </section>
-
-    <section id="validador">
-        <div id="formulario">
-            <input type="search" class="campotexto" name="cpfvalidado" id="cpfvalidado" maxlength="14" placeholder="apenas números" value="">
+        <div>
+            <input class="campotexto" type="text" readonly="readonly" name="cpfgerado" id="cpfgerado" maxlength="11"
+                value="">
+            <input class="botao" type="button" id="copiarbtn" value="Copiar">
+        </div>
+        <div>
+            <input type="text" class="campotexto" name="cpfvalidado" id="cpfvalidado" maxlength="14"
+                placeholder="apenas números" value="">
             <input class="botao" type="button" id="validabtn" value="Validar CPF">
         </div>
-    </section>
-
-    <section id="resultado">
-        Informe um CPF na caixa acima
-    </section>
-
+        <div class="resultado">
+            Informe um CPF na caixa acima
+        </div>
+    </div>
     <footer>
         OKOKOK
     </footer>
     <script src="valida.js"></script>
     <script src="gera.js"></script>
 </body>
+
 </html>

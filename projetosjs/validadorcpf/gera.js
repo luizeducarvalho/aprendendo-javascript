@@ -1,17 +1,24 @@
- (function () {
+(function () {
     let botaoGerar = document.getElementById('gerabtn')
     let inputCPF = document.getElementById('cpfgerado')
     botaoGerar.onclick = function (e) { exibeNovo(inputCPF) }
+    let botaoCopiar = document.getElementById('copiarbtn')
+    botaoCopiar.onclick = function (e) { copiarTexto(inputCPF) }
 })()
 
+
 exibeNovo = cpfInput => cpfInput.value = geraCPFValido()
+copiarTexto = cpfInput => {
+    cpfInput.select()
+    document.execCommand('copy')
+}
 
 function geraCPFValido() {
     let cpf = [], soma = 0, resto = 0
 
     // Gera os primeiros nove dígitos do CPF
     for (let i = 0; i < 9; i++) {
-        cpf.push(geraInteiroAleatorioEntre(0, 9))
+        cpf.push(geraInteiroAleatorioEntre(0, 10))
         soma += parseInt(cpf[i] * (10 - i))
     }
 

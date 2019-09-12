@@ -60,8 +60,11 @@ function validaCPF(cpf) {
 }
 
 function exibeMensagem(mensagem = '', corFundo = '#e2e3e5') {
-    document.getElementById("resultado").innerHTML = mensagem
-    document.getElementById("resultado").style.backgroundColor = corFundo
+    let campoResultado = document.getElementsByClassName("resultado")[0]
+    campoResultado.innerHTML = mensagem
+    campoResultado.style.backgroundColor = corFundo
+    // document.getElementById("resultado").innerHTML = mensagem
+    // document.getElementById("resultado").style.backgroundColor = corFundo
 }
 
 function somenteNumeros(str) {

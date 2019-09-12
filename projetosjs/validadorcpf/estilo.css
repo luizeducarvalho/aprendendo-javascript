@@ -1,90 +1,76 @@
-/* Reset padrão */
-* {
-    margin: 0;
-    padding: 0; 
-}
-/* Definindo que os elementos html e body ocuparão toda tela */
 html, body {
     width: 100%;
     height: 90%;
-}
-
-body{
-   /*background: #7159c1;*/
-   background-color: #2787e5;
-   font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header{
+    width: 320px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #005275;
+    border-radius: 10px;
+    font: normal 16pt Arial;
     color: white;
     text-align: center;
+
 }
 
-section{
-    background: white;
+body{
+    background-color: #2787e5;
+    font-family: Arial, Helvetica, sans-serif;
+ }
+
+#principal {
+    width: 300px;
+    height: 15%;
+    padding: 20px;
+    background: rgb(252, 252, 252);
     border-radius: 10px;
-    padding: 15px;
-    width: 350px;
     margin: 20px auto;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.346)
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.446);
+    text-align: left;
 }
 
-section#resultado {
+.campotexto {
+    margin: 2px;
+    padding: 4px;
+    width: 160;
+    
+}
+
+.botao {
+    height: 25px;
+    width: 35%;
+    margin-bottom: 2px;
+    padding: 5px 15px 18px 15px;
+    color: white;
+    font: bold 10pt Arial;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: #005275;
+    border: 2px;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: #2787e5;
+    transition: 0.5;
+}
+
+.botao:hover {
+    background-color: #2787e5;
+    border-color: #005275;
+}
+
+.resultado {
+    margin: 15px auto;
+    padding: 5px;
     background-color: #e2e3e5;
     text-align: center;
 }
 
-#opcoes {
-    margin-bottom: 0px;
-}
-
-/* Remove as setas do input number */
-/*
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0;
-}
-*/
-
-
-#cpfvalidado {
-    margin: 0px;
-    width: 220px;
-    height: 40px;
-    padding: 4px;
-    background-color: white;
-}
-
-#cpfgerado {
-    margin: 0px;
-    width: 220px;
-    height: 40px;
-    padding: 4px;
-    background-color: white;
-}
-
-.botao {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    background-color: #02b875;
-    border: 2px solid #80dbba;
-    border-radius: 10px;
-    padding: 3px;
-    width: 35%; /* deixando ele responsivo */
-    font-size: 12pt;
-    color: #fff;
-    cursor: pointer;
-    outline: none;
-
-}
-
-.botao:hover {
-    background-color: #02925d;
-}
-
-footer{
-    font: normal 10pt Arial;
+footer {
+    font: normal 09pt Arial;
     color: white;
     text-align: center;
     font-style: italic;
