@@ -1,6 +1,6 @@
 (function () {
     let botaoGerar = document.getElementById('gerabtn')
-    let inputCPF = document.getElementById('cpfgerado')
+    let inputCPF = document.getElementById('cpfgerado') 
     botaoGerar.onclick = function (e) { exibeNovo(inputCPF) }
     let botaoCopiar = document.getElementById('copiarbtn')
     botaoCopiar.onclick = function (e) { copiarTexto(inputCPF) }

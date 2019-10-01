@@ -1,0 +1,30 @@
+@charset UTF-8;
+
+body {
+    /* margin: 20px; */
+}
+
+.form-control {
+    /* background-color: red; */
+    /* width: 120px; */
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin: 4px;
+}
+
+li a {
+    margin: 10px;
+}
+
+/* Estilo para o link de excluir */
+ul a:nth-of-type(2):hover,
+.ul a:nth-of-type(2).selected {
+    background-color: #dd3243;
+    font-weight: bold;
+    color: white;
+}
