@@ -5,8 +5,10 @@ findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55 */
 
 function findUniq(arr) {
     let unico = arr[0]
-    unico = arr.filter(elem => elem !== unico)
-    if (unico.length > 1) { unico[0] = arr[0] }
+    const direfentes = e => e !== unico
+    unico = arr.filter(direfentes)
+    console.log("U: ", unico)
+    if (unico.length) { unico[0] = arr[0] }
     return unico[0]
 }
 

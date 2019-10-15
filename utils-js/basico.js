@@ -15,13 +15,13 @@ function removeAcentos(stringEntrada) {
     const indice = char => listaDeAcentuados.indexOf(char)
     const estaAcentuado = char => indice => indice > -1
     const substituiSeEstiverAcentuado = char => estaAcentuado(char) ? listaDeNaoAcentuados[indice(char)] : char
-    let stringSaida = ''
-    
+    let stringSemAcentuacao = ''
+
     for (const char of stringEntrada) {
-        stringSaida += substituiSeEstiverAcentuado(char)
+        stringSemAcentuacao += substituiSeEstiverAcentuado(char)
     }
 
-    return stringSaida;
+    return stringSemAcentuacao;
 }
 
 // Recebe dois valores e retorna uma array com uma sequencia de inteiros entre esses dois valores

@@ -5,7 +5,7 @@ OK - Verificar se é maior de idade (pela data de nascimento)
 OK - Jogo da velha
 OK - Pedra, papel e tesoura contra a máquina
 
-- Usar Regex para validar campo de CPF e e-mail
+OK - Usar Regex para validar campo de CPF e e-mail
 - Jogo da forca
 - Simulador de dado
 - Usuário insere vários números e mostra a média
@@ -16,7 +16,7 @@ OK - Pedra, papel e tesoura contra a máquina
 - Mostrar a temperatura atual em X localização (pegando de algum webservice)
 - Validador de cartão de crédito (pesquisar como cartões de crédito funcionam)
 - Reordenador de lista
-- Inverter a string
+OK - Inverter a string
 - Testador de expressões regulares
 - Gerenciador de orçamento pessoal
 - Placar de jogo de futebol

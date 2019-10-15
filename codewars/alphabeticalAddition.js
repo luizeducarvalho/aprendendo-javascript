@@ -41,7 +41,7 @@ function letrasParaNumeros(array) {
 }
 
 function addLetters(...letters) {
-  if (letters.length == 0 || letters == null) {
+  if (letters.length === 0 || letters === null) {
     return 'z'
   } else {
     let numeros = letrasParaNumeros(letters)
