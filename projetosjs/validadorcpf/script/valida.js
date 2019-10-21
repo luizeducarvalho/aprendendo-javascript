@@ -6,14 +6,13 @@
 
 function valida(cpf) {
     if (!estaNoFormato(cpf)) {
-        //document.getElementById("cpfvalidado").value = ""
         exibeMensagem("Informe um CPF na caixa acima")
     } else {
         cpf = somenteNumeros(cpf) // Remove os pontos e traço
         if (validaCPF(cpf)) {
-            exibeMensagem("CPF válido!", '#ccf1e3')
+            exibeMensagem(`O CPF ${cpf} é válido!`, '#ccf1e3')
         } else {
-            exibeMensagem("CPF inválido!", '#f7dddc')
+            exibeMensagem(`O CPF ${cpf} é inválido!`, '#f7dddc')
         }
     }
 }
@@ -34,7 +33,6 @@ todosDigitosIguais = cpf => {
 
 function validaCPF(cpf) {
     if (todosDigitosIguais(cpf)) return false
-
     let soma = 0, resto = 0
     for (let i = 0; i < 9; i++) {
         soma += parseInt(cpf[i] * (10 - i))
@@ -63,8 +61,6 @@ function exibeMensagem(mensagem = '', corFundo = '#e2e3e5') {
     let campoResultado = document.getElementsByClassName("resultado")[0]
     campoResultado.innerHTML = mensagem
     campoResultado.style.backgroundColor = corFundo
-    // document.getElementById("resultado").innerHTML = mensagem
-    // document.getElementById("resultado").style.backgroundColor = corFundo
 }
 
 function somenteNumeros(str) {
