@@ -8,6 +8,11 @@ function geraInteiroAleatorioEntre(min = 0, max = 0) {
     return Math.floor(valor)
 }
 
+// Recebe um array e retorna um objeto com a quantidade que cada elemento aparece no array
+function contadorDeItensComArray(arr) {
+    return arr.reduce((contador, elem) => Object.assign(contador, { [elem]: (contador[elem] || 0) + 1 }), {})
+}
+
 // Remove acentução de um texto recebido como argumento
 function removeAcentos(stringEntrada) {
     const listaDeAcentuados = 'áãâàäÁÃÂÀÄéêèëÉÊÈËíîìïÍÎÌÏóõôòöÓÕÔÒÖúûüùÚÛÜÙçÇñÑ'
